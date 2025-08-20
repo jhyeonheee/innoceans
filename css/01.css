@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 기본설정 end */
+
+.mobile {
+    display: none;
+}
+.all{
+    width: 100%;
+    background-color: black;
+}
+.header {
+    height: 100px;
+    background-color: black;
+
+}
+
+.header .inner {
+    max-width: 1280px;
+    width: calc(100% - 64px);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header .inner .logo {
+    height: 50px;
+}
+
+.header .inner .logo a {
+    display: block;
+    height: 100%;
+}
+
+.header .inner .nav_pc {
+    display: flex;
+    align-items: center;
+}
+
+.header .inner .nav_pc .gnb {
+    color: white;
+    display: flex;
+    
+}
+
+.header .inner .nav_pc .gnb li {
+    /* padding: auto 30px;
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    margin-left: 20px;
+    display: none; */
+}
+
+.header .inner .nav_pc .gnb a {
+    padding: 0 30px;
+}
+
+.header .inner .nav_pc .gnb li:hover {
+    /* display: block; */
+    width: 100%;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    text-align: center;
+
+}
+
+
+
+.header .inner .menu a {
+    color: white;
+    margin-left: 10px;
+
+}
+
+@media screen and (max-width:1024px) {
+    .pc {display: none;}
+    .mobile {display: block;}
+
+    .header .inner .nav_mobile .menu_btn {
+        border: 0;
+        background-color: transparent;
+        height: 40px;
+    }
+
+    .header .inner .nav_mobile .menu_btn img {
+        height: 100%;
+    }
+
+    .header .inner .nav_mobile {
+        width: 80%;
+        height: 100%;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        background-color: #000000;
+        transition: right 0.7s;
+        color: white;
+    }
+
+    .header .inner .nav_mobile.active {
+        right: 0;
+    }
+
+}
+
+
+
+
+/* .header end */
+
+.main {
+    height: 100%;
+    background-color: black;
+}
+
+.main .main_visual {
+    max-width: 1280px;
+    width: calc(100% - 64px);
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    text-align: center;
+}
+
+.main .main_visual .image {
+    width: 520px;
+    height: 620px;
+    margin: 0 auto;
+}
+.main .main_visual .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.main .main_visual .text {
+    position: absolute;
+  
+    margin: 0 auto;
+}
+
+.main .main_visual .text h2 {
+    color: white;
+    font-size: 115px;
+    position: relative;
+    text-align: center;
+
+}
